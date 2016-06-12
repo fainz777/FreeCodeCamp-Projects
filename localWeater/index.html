@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Local Weather</title>
+	<link rel="stylesheet" href="https://erikflowers.github.io/weather-icons/css/weather-icons.min.css">
+	<link rel="stylesheet" href="https://erikflowers.github.io/weather-icons/css/weather-icons-wind.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="https://maps.googleapis.com/maps/api/js" async defer></script>
+
+<div class="wrapper">
+	<h1 id="location"></h1>
+
+	<div class="switcher">
+		<input id="celsius" class="temperature_switch" type="radio" name="temperature" value="celsius" data-measure="C" checked>
+		<label class="switcher_item" for="celsius">°C</label>
+
+		<input id="fahrenheit" class="temperature_switch" type="radio" name="temperature" value="fahrenheit" data-measure="F">
+		<label class="switcher_item" for="fahrenheit">°F</label>
+
+		<input id="kelvin" class="temperature_switch" type="radio" name="temperature" value="kelvin" data-measure="K">
+		<label class="switcher_item" for="kelvin">°K</label>
+
+		<input class="current_temperature" type="hidden" value="celsius">
+	</div>
+
+	<div class="switcher">
+		<input id="mmHg" class="preasure_switch" type="radio" name="pressure" value="mmHg" checked>
+		<label class="switcher_item" for="mmHg">mmHg</label>
+
+		<input id="hpa" class="preasure_switch" type="radio" name="pressure" value="hPa" data-measure="F">
+		<label class="switcher_item" for="hpa">hPa</label>
+
+		<input class="current_pressure" type="hidden" value="mmHg">
+	</div>
+
+
+	<div class="weather_wrapper">
+		<div id="loading">Loading...</div>
+		<div id="weather" class="weather"></div>
+		<div id="map" class="map"></div>
+	</div>
+	<!--button id="get_location">Get Location</button-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</div>
+</body>
+</html>
