@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  background: #ccc url(http://hdwpro.com/wp-content/uploads/2015/12/hd-nature-background.jpg) 50% 0 / cover no-repeat fixed;
+}
+
+h1 {
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 30px;
+  
+}
+
+.switcher {
+  overflow: hidden;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+input[type="radio"] {
+  position: absolute;
+  display: none;
+}
+
+.switcher_item {
+  float: left;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-left: none;
+  cursor: pointer;
+  background: #00A09A;
+  color: #fff
+}
+
+input[type="radio"]:first-child + .switcher_item {
+  border-left: 1px solid #ccc;
+  border-left: 1px solid rgba(255, 255, 255, .5);
+}
+
+.switcher_item:hover,
+input[type="radio"]:checked + .switcher_item {
+  background: #00504D;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3)
+} 
+
+.weather_wrapper {
+  overflow: hidden;
+}
+
+.map {
+  height: 300px;
+  width: 300px;
+  display: none;
+  margin: 30px auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wi.main-icon {
+  font-size: 80px;
+}
+
+ul li {
+  margin-bottom: 15px;
+}
+
+ul .wi {
+  font-size: 30px;
+  margin-right: 20px;
+  position: relative;
+  top: 3px;
+  color: #284D58;
+}
+
+
+
+.main_icon_wrapper {
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 800px) {
+  body {
+    padding: 50px;
+  }
+  .wrapper {
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  .weather {
+    width: 300px;
+    float: left;
+  }
+  
+  .main_icon_wrapper,
+.description {
+  width: 600px;
+}
+  
+  .map {
+    float: left;
+    margin-top: 190px;
+  }
+}
